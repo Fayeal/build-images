@@ -13,3 +13,4 @@ before_script:
 script: 
   - docker login -u ${DOCKER_USERNAME} -p ${DOCKER_PASSWORD}
   - docker buildx build -f rust/buster/Dockerfile --platform linux/amd64,linux/arm64 -t odidev/build-images:rust-buster-stable --push .
+  
